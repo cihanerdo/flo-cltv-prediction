@@ -45,7 +45,6 @@ def replace_with_thresholds(dataframe, variable):
 df.describe().T
 df.info()
 
-# Tüm sütunlarda max değer gerekenden yüksek olduğu için aykırı değerleri baskılamak için gerekli olan fonksiyonu uyguluyoruz.
 
 replace_with_thresholds(df, "order_num_total_ever_online")
 replace_with_thresholds(df, "order_num_total_ever_offline")
@@ -211,13 +210,6 @@ cltv_df["cltv"] = cltv_df["cltv"].astype(float)
 cltv_df.groupby("cltv_segment").agg({"cltv": ["sum", "count", "mean"]})
 
 
-#                             cltv
-#                      sum count    mean
-# cltv_segment
-# D             389278.975  4892  79.575
-# C             670711.389  4891 137.132
-# B             968023.166  4891 197.919
-# A            1755055.782  4892 358.760
 
 # Segmentlerimiz eşit dağılmışlar. Ortalamalarında bir sıkıntı gözükmüyor. Toplam değerleri arasında çok fark olmaması veriyi düzgün böldüğümüzü gösteriyor.
 
@@ -227,15 +219,7 @@ cltv_df.groupby("cltv_segment").agg({"cltv": ["sum", "count", "mean"]})
 cltv_df[cltv_df["cltv_segment"] == "D"].describe().T
 
 
-#                           count    mean    std    min    25%     50%     75%     max
-# recency_cltv_weekly    4892.000 139.168 96.479  1.000 69.000 101.000 200.000 432.000
-# T_weekly               4892.000 162.548 96.025 11.000 91.000 118.000 224.000 436.000
-# frequency              4892.000   3.777  2.150  2.000  2.000   3.000   4.250  18.000
-# monetary_cltv_avg      4892.000  92.409 30.378 22.000 73.000  89.000 108.000 284.000
-# exp_sales_3_month      4892.000   0.408  0.123  0.149  0.325   0.411   0.483   1.051
-# exp_sales_6_month      4892.000   0.817  0.245  0.299  0.651   0.822   0.967   2.102
-# expected_average_value 4892.000  97.898 31.799 24.395 76.936  94.011 113.344 305.482
-# cltv                   4892.000  79.575 21.575 11.886 64.490  83.022  97.784 111.334
+
 
 # D segmentindeki insanların alışveriş alışkanlığı yukarıdaki tablodaki gibidir. Bu tabloya göre D segmentindeki
 # bir kişinin 6 aylık süreç içerisinde 0.817 alışveriş yapması bekleniyor. Bu değeri arttırmak için D segmentindeki ortalama
@@ -243,15 +227,7 @@ cltv_df[cltv_df["cltv_segment"] == "D"].describe().T
 
 cltv_df[cltv_df["cltv_segment"] == "A"].describe().T
 
-#                           count    mean     std     min     25%     50%     75%      max
-# recency_cltv_weekly    4892.000  67.869  51.572   1.000  35.000  62.000  86.000  433.000
-# T_weekly               4892.000  83.244  50.848   2.000  54.000  79.000  98.000  437.000
-# frequency              4892.000   6.666   6.044   2.000   3.000   5.000   8.000   57.000
-# monetary_cltv_avg      4892.000 227.856  88.720  64.000 170.000 209.000 263.000 1401.000
-# exp_sales_3_month      4892.000   0.770   0.297   0.212   0.574   0.710   0.882    4.652
-# exp_sales_6_month      4892.000   1.539   0.594   0.425   1.147   1.419   1.765    9.304
-# expected_average_value 4892.000 236.921  94.224  64.615 175.401 217.396 275.029 1448.103
-# cltv                   4892.000 358.760 157.069 238.264 267.898 310.231 391.540 3346.849
+
 
 # A segmentindeki insanların alışveriş alışkanlığı yukarıdaki gibidir. Bu segmentteki kişiler sık bir şekilde alışveriş yapmaktadır.
 # Bu segmentteki kişiler için ürün yelpazemizi genişletmek daha farklı modeller üretmek bu kişileri daha fazla alışveriş yapmaya itebilir.
