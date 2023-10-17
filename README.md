@@ -4,9 +4,10 @@
 
 **[FLO](https://www.flo.com.tr/)** Türkiye’nin büyük ticaret sitelerinden bir tanesi. 
 
-**FLO** satış ve pazarlama faaliyetleri için bir yol haritası belirlemek istiyor.
+Satış ve pazarlama faaliyetleri için bir yol haritası belirlemek isteyen Flo,
+orta ve uzun vadeli planlama yapabilmek için mevcut müşterilerin şirkete sağlayacağı 
+potansiyel değeri tahmin etmek istiyor.
 
-Orta ve uzun vadeli planlama yapabilmek için şirket mevcut müşterilerin gelecekte şirkete sağlayacağı potansiyel değeri tahmin etmek istiyor.
 
 # Dataset Info
 
