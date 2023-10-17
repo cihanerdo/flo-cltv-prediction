@@ -1,4 +1,4 @@
-![](C:/Users/oe/PycharmProjects/DSMLBC/FLO_CLTV_ANALYSIS/README/FLO_CLTV.png)
+![](https://github.com/cihanerdo/flo-cltv-prediction/blob/main/README/FLO_CLTV.png)
 
 # Business Problem
 
@@ -10,7 +10,7 @@ Orta ve uzun vadeli planlama yapabilmek için şirket mevcut müşterilerin gele
 
 # Dataset Info
 
-**Özellikler**: 13
+**Özellikler**: 12
 
 **Toplam Sıra**: 19.945
 
@@ -39,13 +39,15 @@ lifetimes~=0.11.3
 
 # Files
 
+[**FLO_CLTV_ANALYSIS.ipynb**](https://github.com/cihanerdo/flo-cltv-prediction/blob/main/FLO_CLTV_ANALYSIS.ipynb)
 
-
+[**FLO_CLTV_P_Analysis.py**](https://github.com/cihanerdo/flo-cltv-prediction/blob/main/FLO_CLTV_P_Analysis.py)
 
 
 # Author
 
-[**Cihan Erdoğan**]([https://github.com/cihanerdo])
+[**Cihan Erdoğan**](https://github.com/cihanerdo)
+
 
 
 
